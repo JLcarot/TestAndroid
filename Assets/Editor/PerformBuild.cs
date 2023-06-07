@@ -16,5 +16,4 @@ static void androidBuild ()
 
     Debug.Log("Starting Android Build!");
     BuildPipeline.BuildPlayer(scenes, path, BuildTarget.Android, BuildOptions.None);
-    BuildPipeline.buil
 }
