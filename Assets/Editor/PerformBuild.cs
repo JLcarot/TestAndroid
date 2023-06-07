@@ -6,7 +6,7 @@ using System.Collections.Generic;
 
 class PerformBuild
 {
-    private static string BUILD_LOCATION = "+buildlocation";
+    private static string BUILD_LOCATION = "C:\ProgramData\Jenkins\.jenkins\workspace\Test_Android\";
 
     static string GetBuildLocation(BuildTarget buildTarget)
     {
