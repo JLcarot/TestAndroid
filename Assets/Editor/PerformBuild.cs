@@ -1,4 +1,3 @@
-[UnityEditor.MenuItem("CUSTOM/Test Android Build Step")]
 using System;
 using System.Globalization;
 using System.Collections;
@@ -6,6 +5,7 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 
+[UnityEditor.MenuItem("CUSTOM/Test Android Build Step")]
 static void androidBuild ()
 {
     Debug.Log("Command line build android version\n------------------\n------------------");
