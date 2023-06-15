@@ -47,9 +47,6 @@ class BuildScript {
 	static void GenericBuild(string[] scenes, string target_dir, BuildTargetGroup build_target_group, BuildTarget build_target, BuildOptions build_options)
 	{
 		EditorUserBuildSettings.SwitchActiveBuildTarget(build_target_group, build_target);
-		string res = BuildPipeline.BuildPlayer(scenes,target_dir,build_target,build_options);
-		if (res.Length > 0) {
-			throw new Exception("BuildPlayer failure: " + res);
-		}
+		BuildPipeline.BuildPlayer(scenes,target_dir,build_target,build_options);
 	}
 }
