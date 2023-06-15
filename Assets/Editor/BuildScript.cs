@@ -23,8 +23,6 @@ class BuildScript {
 
 	static void PerformAndroidBuild ()
 	{
-		//Set the path to the Android SDK on the machine, since Unity cannot retain the state properly
-		AndroidSDKFolder.Path = "${ANDROID_HOME}";
 		string target_dir = APP_NAME + ".apk";
 		GenericBuild(SCENES, TARGET_DIR + "/" + target_dir, BuildTargetGroup.Android, BuildTarget.Android, BuildOptions.None);
 	}
