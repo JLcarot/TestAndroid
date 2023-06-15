@@ -6,7 +6,6 @@ class BuildScript {
 	static string[] SCENES = FindEnabledEditorScenes();
 
 	static string APP_NAME = "Test_Android";
-	static string TARGET_DIR = "C:/";
 
 	static void PerformAllBuilds ()
 	{
@@ -15,19 +14,19 @@ class BuildScript {
 		PerformiOSBuild();
 	}
 
-	static void PerformWindowsBuild ()
+	static void PerformWindowsBuild (string TARGET_DIR)
 	{
 		string target_dir = APP_NAME + ".exe";
 		GenericBuild(SCENES, TARGET_DIR + "/" + target_dir, BuildTargetGroup.Standalone, BuildTarget.StandaloneWindows,BuildOptions.None);
 	}
 
-	static void PerformAndroidBuild ()
+	static void PerformAndroidBuild (string TARGET_DIR)
 	{
 		string target_dir = APP_NAME + ".apk";
 		GenericBuild(SCENES, TARGET_DIR + "/" + target_dir, BuildTargetGroup.Android, BuildTarget.Android, BuildOptions.None);
 	}
 
-	static void PerformiOSBuild ()
+	static void PerformiOSBuild (string TARGET_DIR)
 	{
 		string target_dir = "iOS";
 		//We do not build the xcodeproject in the target directory, since we do not want to archive the
