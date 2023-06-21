@@ -1,12 +1,17 @@
 public class BuildScript 
 {
+
+    private static string[] FindEnabledEditorScenes() {
+		List<string> EditorScenes = new List<string>();
+		foreach(EditorBuildSettingsScene scene in EditorBuildSettings.scenes) {
+			if (!scene.enabled) continue;
+			EditorScenes.Add(scene.path);
+		}
+		return EditorScenes.ToArray();
+	}
+    
     static void PerformBuild()
     {
-        string[] defaultScene = { 
-            "Assets/MyGame/Scenes/MyGame_TitleScene.unity",
-            "Assets/MyGame/Scenes/MyGame_MainScene.unity",
-            "Assets/MyGame/Scenes/MyGame_EpisodeScene.unity",
-            };
 
         BuildPipeline.BuildPlayer(defaultScene, "MyGame.apk" ,
             BuildTarget.Android, BuildOptions.None);
