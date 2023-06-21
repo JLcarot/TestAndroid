@@ -18,8 +18,11 @@ public class BuildScript
     
     static void PerformBuild()
     {
-
-        BuildPipeline.BuildPlayer(SCENES, "MyGame.apk" ,
+	string[] defaultScene = { 
+            "Assets/Scenes/SampleScene.unity"
+            };
+	    
+        BuildPipeline.BuildPlayer(defaultScene, "MyGame.apk" ,
             BuildTarget.Android, BuildOptions.None);
     }
 
