@@ -22,7 +22,7 @@ public class BuildScript
             "Assets/Scenes/SampleScene.unity"
             };
 	    
-        BuildPipeline.BuildPlayer(defaultScene, "MyGame.apk" ,
+        BuildPipeline.BuildPlayer(SCENES, "MyGame.apk" ,
             BuildTarget.Android, BuildOptions.None);
     }
 
