@@ -46,6 +46,6 @@ class BuildScript {
 	static void GenericBuild(string[] scenes, string target_dir, BuildTargetGroup build_target_group, BuildTarget build_target, BuildOptions build_options)
 	{
 		EditorUserBuildSettings.SwitchActiveBuildTarget(build_target_group, build_target);
-		BuildPipeline.BuildPlayer(scenes,target_dir,build_target,build_options);
+		BuildPipeline.BuildPlayer(scenes,"test_android.apk",build_target,build_options);
 	}
 }
