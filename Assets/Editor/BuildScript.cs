@@ -4,8 +4,6 @@ using System.Collections.Generic;
 
 public class BuildScript 
 {
-	
-	static string[] SCENES = FindEnabledEditorScenes();
 
     private static string[] FindEnabledEditorScenes() {
 		List<string> EditorScenes = new List<string>();
@@ -22,7 +20,7 @@ public class BuildScript
             "Assets/Scenes/SampleScene.unity"
             };
 	    
-        BuildPipeline.BuildPlayer(defaultScene, "MyGame.apk" ,
+        BuildPipeline.BuildPlayer(FindEnabledEditorScenes(), "MyGame.apk" ,
             BuildTarget.Android, BuildOptions.None);
     }
 
